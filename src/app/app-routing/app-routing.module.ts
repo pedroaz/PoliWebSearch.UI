@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LandingPageComponent } from '../Components/landing-page/landing-page.component'
-import { PortalPageComponent } from '../Components/portal-page/portal-page.component'
+import { LandingPageComponent } from '../Components/Pages/landing-page/landing-page.component'
+import { PortalPageComponent } from '../Components/Pages/portal-page/portal-page.component'
 
 const routes: Routes = [
     {
