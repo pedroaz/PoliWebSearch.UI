@@ -22,6 +22,7 @@ import { ChartsPageComponent } from './Components/Pages/charts-page/charts-page.
 import { InspectPageComponent } from './Components/Pages//inspect-page/inspect-page.component';
 import { PortalTopMenuComponent } from './Components/portal-top-menu/portal-top-menu.component';
 import { FieldsetModule, } from 'primeng/fieldset';
+import {ChartModule} from 'primeng/chart';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { FieldsetModule, } from 'primeng/fieldset';
     TabMenuModule,
     InputTextModule,
     FieldsetModule,
+    ChartModule,
   ],
   bootstrap: [AppComponent]
 })
