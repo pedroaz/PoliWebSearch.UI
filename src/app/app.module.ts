@@ -21,6 +21,7 @@ import { SearchPageComponent } from './Components/Pages//search-page/search-page
 import { ChartsPageComponent } from './Components/Pages/charts-page/charts-page.component';
 import { InspectPageComponent } from './Components/Pages//inspect-page/inspect-page.component';
 import { PortalTopMenuComponent } from './Components/portal-top-menu/portal-top-menu.component';
+import { FieldsetModule, } from 'primeng/fieldset';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { PortalTopMenuComponent } from './Components/portal-top-menu/portal-top-
     ButtonModule,
     TabMenuModule,
     InputTextModule,
+    FieldsetModule,
   ],
   bootstrap: [AppComponent]
 })

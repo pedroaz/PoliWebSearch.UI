@@ -16,10 +16,10 @@ export class PortalTopMenuComponent implements OnInit {
   ngOnInit() {
     this.items = [
         {label: 'Portal', icon: 'pi pi-fw pi-home', command: () => this.goToRoute('portal')},
-        {label: 'Graph', icon: 'pi pi-fw pi-circle-off', command: () => this.goToRoute('graphs')},
-        {label: 'Search', icon: 'pi pi-fw pi-search', command: () => this.goToRoute('search')},
-        {label: 'Inspect', icon: 'pi pi-fw pi-info', command: () => this.goToRoute('inspect')},
-        {label: 'Charts', icon: 'pi pi-fw pi-chart-bar', command: () => this.goToRoute('charts')}
+        {label: 'Grafos', icon: 'pi pi-fw pi-circle-off', command: () => this.goToRoute('graphs')},
+        {label: 'Busca', icon: 'pi pi-fw pi-search', command: () => this.goToRoute('search')},
+        {label: 'Inspeção', icon: 'pi pi-fw pi-info', command: () => this.goToRoute('inspect')},
+        {label: 'Gráficos', icon: 'pi pi-fw pi-chart-bar', command: () => this.goToRoute('charts')}
     ];
   }
 
