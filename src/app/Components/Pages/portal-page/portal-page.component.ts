@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortalPageComponent implements OnInit {
 
+  showLeftMenu: Boolean = true;
+
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }
