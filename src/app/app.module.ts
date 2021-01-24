@@ -14,18 +14,32 @@ import { PortalPageComponent } from './Components//Pages/portal-page/portal-page
 
 // Primeng
 import { ButtonModule } from 'primeng/button';
-import { MenubarModule } from 'primeng/menubar';
+import {TabMenuModule} from 'primeng/tabmenu';
 import { InputTextModule } from 'primeng/inputtext';
+import { GraphPageComponent } from './Components/Pages/graph-page/graph-page.component';
+import { SearchPageComponent } from './Components/Pages//search-page/search-page.component';
+import { ChartsPageComponent } from './Components/Pages/charts-page/charts-page.component';
+import { InspectPageComponent } from './Components/Pages//inspect-page/inspect-page.component';
+import { PortalTopMenuComponent } from './Components/portal-top-menu/portal-top-menu.component';
 
 @NgModule({
-  declarations: [AppComponent, LandingPageComponent, PortalPageComponent],
+  declarations: [
+    AppComponent,
+    LandingPageComponent,
+    PortalPageComponent,
+    GraphPageComponent, 
+    SearchPageComponent, 
+    ChartsPageComponent, 
+    InspectPageComponent, 
+    PortalTopMenuComponent
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     ButtonModule,
-    MenubarModule,
-    InputTextModule
+    TabMenuModule,
+    InputTextModule,
   ],
   bootstrap: [AppComponent]
 })
