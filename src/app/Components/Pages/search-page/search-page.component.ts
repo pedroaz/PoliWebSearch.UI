@@ -7,7 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchPageComponent implements OnInit {
 
-  constructor() { }
+  serachTypes: string[];
+
+  selectedSearchType: string;
+
+
+  constructor() {
+
+    this.serachTypes = [
+      'Pessoa - Cpf',
+      'Pessoa - Nome',
+      'Empresa - Cnpj', 
+      'Empresa - Nome'
+    ]
+
+   }
 
   ngOnInit(): void {
   }

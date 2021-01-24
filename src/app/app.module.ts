@@ -23,6 +23,7 @@ import { InspectPageComponent } from './Components/Pages//inspect-page/inspect-p
 import { PortalTopMenuComponent } from './Components/portal-top-menu/portal-top-menu.component';
 import { FieldsetModule, } from 'primeng/fieldset';
 import {ChartModule} from 'primeng/chart';
+import {DropdownModule} from 'primeng/dropdown';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import {ChartModule} from 'primeng/chart';
     InputTextModule,
     FieldsetModule,
     ChartModule,
+    DropdownModule
   ],
   bootstrap: [AppComponent]
 })
