@@ -19,11 +19,15 @@ import { InputTextModule } from 'primeng/inputtext';
 import { GraphPageComponent } from './Components/Pages/graph-page/graph-page.component';
 import { SearchPageComponent } from './Components/Pages//search-page/search-page.component';
 import { ChartsPageComponent } from './Components/Pages/charts-page/charts-page.component';
-import { InspectPageComponent } from './Components/Pages//inspect-page/inspect-page.component';
 import { PortalTopMenuComponent } from './Components/portal-top-menu/portal-top-menu.component';
 import { FieldsetModule, } from 'primeng/fieldset';
 import {ChartModule} from 'primeng/chart';
 import {DropdownModule} from 'primeng/dropdown';
+import { PersonPageComponent } from './Components/Pages/person-page/person-page.component';
+
+// Services
+import { HttpClientModule } from '@angular/common/http';
+import { PwsApiService } from "./Services/pws-api.service"
 
 @NgModule({
   declarations: [
@@ -33,8 +37,8 @@ import {DropdownModule} from 'primeng/dropdown';
     GraphPageComponent, 
     SearchPageComponent, 
     ChartsPageComponent, 
-    InspectPageComponent, 
-    PortalTopMenuComponent
+    PortalTopMenuComponent, 
+    PersonPageComponent
   ],
   imports: [
     BrowserModule,
@@ -45,8 +49,12 @@ import {DropdownModule} from 'primeng/dropdown';
     InputTextModule,
     FieldsetModule,
     ChartModule,
-    DropdownModule
+    DropdownModule,
+    HttpClientModule
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [
+    PwsApiService
+  ]
 })
 export class AppModule {}
