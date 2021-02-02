@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PwsApiService {
 
-  url = "https://pwsdatabasefunctions.azurewebsites.net/api/GetPersonInformationByCpf/04460838877"
+  url = "api/GetPersonInformationByCpf/04460838877"
 
   constructor(private httpClient: HttpClient) { }
 

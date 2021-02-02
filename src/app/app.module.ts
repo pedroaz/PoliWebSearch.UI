@@ -26,7 +26,7 @@ import {DropdownModule} from 'primeng/dropdown';
 import { PersonPageComponent } from './Components/Pages/person-page/person-page.component';
 
 // Services
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { PwsApiService } from "./Services/pws-api.service"
 
 @NgModule({
