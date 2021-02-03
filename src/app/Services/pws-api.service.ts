@@ -8,17 +8,11 @@ import { environment } from '../../environments/environment'
 export class PwsApiService {
 
   // url = "api/GetPersonInformationByCpf/04460838877"
-  url = environment.baseUrl + "api/GetPersonInformationByCpf/04460838877"
+  url = environment.baseUrl + "api/GetPersonInformationByCpf/"
 
   constructor(private httpClient: HttpClient) { }
 
-  GetPersonInformationByCpf(cpf: string){
-
-    console.log("Is Prod:" + environment.production);
-    console.log("URL:" + this.url);
-
-    this.httpClient.get(this.url).subscribe(res => {
-      console.log(res);
-    });
+  async GetPersonInformationByCpf(cpf: string){
+    return await this.httpClient.get(this.url + cpf).toPromise();
   }
 }

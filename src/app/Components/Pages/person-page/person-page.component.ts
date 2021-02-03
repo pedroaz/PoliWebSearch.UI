@@ -11,13 +11,14 @@ export class PersonPageComponent implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute, private pswApi: PwsApiService) { }
 
-  cpf: string;
 
-  ngOnInit(): void {
-    this.activatedRoute.queryParams.subscribe( params => {
-      this.cpf = params["cpf"];
-      this.pswApi.GetPersonInformationByCpf(this.cpf);
+  async ngOnInit(): Promise<void> {
+    this.activatedRoute.queryParams.subscribe( async params => {
+      let cpf = params["cpf"];
+      console.log("CPF: " + cpf)
+      let result = await this.pswApi.GetPersonInformationByCpf(cpf);
+      console.log("Result: ");
+      console.log(result);
     });
   }
-
 }
