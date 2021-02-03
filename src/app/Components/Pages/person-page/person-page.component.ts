@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { PwsApiService } from 'src/app/Services/pws-api.service';
 
 @Component({
@@ -13,12 +13,11 @@ export class PersonPageComponent implements OnInit {
 
 
   async ngOnInit(): Promise<void> {
+    // TODO: Change this to async...
     this.activatedRoute.queryParams.subscribe( async params => {
       let cpf = params["cpf"];
-      console.log("CPF: " + cpf)
-      let result = await this.pswApi.GetPersonInformationByCpf(cpf);
-      console.log("Result: ");
-      console.log(result);
+      let personData = await this.pswApi.GetPersonInformationByCpf(cpf);
+      console.log(personData.candidateName);
     });
   }
 }

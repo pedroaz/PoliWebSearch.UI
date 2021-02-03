@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment'
+import { PersonData } from '../Models/PersonData';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ export class PwsApiService {
 
   constructor(private httpClient: HttpClient) { }
 
-  async GetPersonInformationByCpf(cpf: string){
-    return await this.httpClient.get(this.url + cpf).toPromise();
+  async GetPersonInformationByCpf(cpf: string) : Promise<PersonData>{
+    return await this.httpClient.get<PersonData>(this.url + cpf).toPromise();
   }
 }
