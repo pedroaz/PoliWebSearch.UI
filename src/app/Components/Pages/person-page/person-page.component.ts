@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { PersonData } from 'src/app/Models/PersonData';
 import { PwsApiService } from 'src/app/Services/pws-api.service';
 
 @Component({
@@ -9,6 +10,8 @@ import { PwsApiService } from 'src/app/Services/pws-api.service';
 })
 export class PersonPageComponent implements OnInit {
 
+  loading = true;
+  personData: PersonData;
   constructor(private activatedRoute: ActivatedRoute, private pswApi: PwsApiService) { }
 
 
@@ -16,8 +19,8 @@ export class PersonPageComponent implements OnInit {
     // TODO: Change this to async...
     this.activatedRoute.queryParams.subscribe( async params => {
       let cpf = params["cpf"];
-      let personData = await this.pswApi.GetPersonInformationByCpf(cpf);
-      console.log(personData.candidateName);
+      this.personData = await this.pswApi.GetPersonInformationByCpf(cpf);
+      this.loading = false;
     });
   }
 }

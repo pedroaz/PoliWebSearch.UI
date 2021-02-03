@@ -14,16 +14,17 @@ import { PortalPageComponent } from './Components//Pages/portal-page/portal-page
 
 // Primeng
 import { ButtonModule } from 'primeng/button';
-import {TabMenuModule} from 'primeng/tabmenu';
+import { TabMenuModule } from 'primeng/tabmenu';
 import { InputTextModule } from 'primeng/inputtext';
 import { GraphPageComponent } from './Components/Pages/graph-page/graph-page.component';
 import { SearchPageComponent } from './Components/Pages//search-page/search-page.component';
 import { ChartsPageComponent } from './Components/Pages/charts-page/charts-page.component';
 import { PortalTopMenuComponent } from './Components/portal-top-menu/portal-top-menu.component';
 import { FieldsetModule, } from 'primeng/fieldset';
-import {ChartModule} from 'primeng/chart';
-import {DropdownModule} from 'primeng/dropdown';
+import { ChartModule } from 'primeng/chart';
+import { DropdownModule } from 'primeng/dropdown';
 import { PersonPageComponent } from './Components/Pages/person-page/person-page.component';
+import { PanelModule } from 'primeng/panel';
 
 // Services
 import { HttpClientModule } from '@angular/common/http';
@@ -50,7 +51,8 @@ import { PwsApiService } from "./Services/pws-api.service"
     FieldsetModule,
     ChartModule,
     DropdownModule,
-    HttpClientModule
+    HttpClientModule,
+    PanelModule
   ],
   bootstrap: [AppComponent],
   providers: [
