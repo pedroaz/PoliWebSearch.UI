@@ -1,10 +1,13 @@
 <app-portal-top-menu></app-portal-top-menu>
 
 <div *ngIf='!loading'>
-    <h1>{{personData.candidateName}}</h1>
+    <h1>{{personData.names[0]}}</h1>
     <p-panel  header="Dados Pessoais">
         <ul>
-            <li>Nome: {{personData.candidateName}}</li>
+            <li>Nomes:</li>
+            <ul *ngFor="let name of personData.names">
+                <li>{{name}}</li>
+            </ul>
             <li>Cpf: {{personData.cpf}}</li>
         </ul>
     </p-panel>
