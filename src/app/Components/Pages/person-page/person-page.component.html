@@ -1,6 +1,10 @@
 <app-portal-top-menu></app-portal-top-menu>
 
-<div *ngIf='!loading'>
+<div *ngIf="loading;else person_content">
+    <i class="pi pi-spin pi-spinner" style="font-size: 2rem"></i>
+</div>
+
+<ng-template #person_content>
     <h1>{{personData.names[0]}}</h1>
     <p-panel  header="Dados Pessoais">
         <ul>
@@ -11,5 +15,4 @@
             <li>Cpf: {{personData.cpf}}</li>
         </ul>
     </p-panel>
-</div>
-
+</ng-template>

@@ -1,4 +1,28 @@
 <app-portal-top-menu></app-portal-top-menu>
 
-<p-dropdown [options]="serachTypes" optionLabel="Buscar por: "></p-dropdown>
-<input type="text" pInputText placeholder="Search">
+
+<div class="p-d-flex p-flex-column">
+
+    <!-- Search Box -->
+
+    <div class="p-mb-5 search-options p-d-flex p-flex-column">
+
+        <h1 class="p-d-flex p-jc-center">O que você deseja buscar?</h1>
+
+        <div class="p-d-flex p-jc-center">
+            <button (click)="setSearchType('people')" pButton pRipple type="button" label="Pessoas" class="p-button-raised spaced-button"></button>
+            <button pButton pRipple type="button" label="Empresas" class="p-button-raised spaced-button"></button>
+            <button pButton pRipple type="button" label="Partidos" class="p-button-raised spaced-button"></button>
+        </div>
+        
+    </div>
+    
+    <div *ngIf="searchType=='people'">
+        <div class="p-mb-5 search-box p-d-flex p-jc-center">
+            <input [(ngModel)]="personToSearchName" class="search-bar" type="text" pInputText placeholder="Digite o nome da pessoa">
+            <button (click)="searchForPerson()" pButton pRipple type="button" icon="pi pi-search" class="p-button-rounded p-button-success search-button"></button>
+        </div>
+    </div>
+
+    
+</div>

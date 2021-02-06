@@ -8,12 +8,15 @@ import { PersonData } from '../Models/PersonData';
 })
 export class PwsApiService {
 
-  // url = "api/GetPersonInformationByCpf/04460838877"
-  url = environment.baseUrl + "api/GetPersonInformationByCpf/"
-
   constructor(private httpClient: HttpClient) { }
 
   async GetPersonInformationByCpf(cpf: string) : Promise<PersonData>{
-    return await this.httpClient.get<PersonData>(this.url + cpf).toPromise();
+    let url = environment.baseUrl + "api/GetPersonInformationByCpf/" + cpf;
+    return await this.httpClient.get<PersonData>(url).toPromise();
+  }
+
+  async SearchPersonByName(name: string) : Promise<PersonData[]>{
+    let url = environment.baseUrl + "api/SearchPersonByName/" + name;
+    return await this.httpClient.get<PersonData[]>(url).toPromise();
   }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PwsApiService } from '../../../Services/pws-api.service'
 
 @Component({
   selector: 'app-search-page',
@@ -7,23 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchPageComponent implements OnInit {
 
-  serachTypes: string[];
+  searchType = "";
+  personToSearchName = "";
 
-  selectedSearchType: string;
+  constructor(private pswApi: PwsApiService) {
 
-
-  constructor() {
-
-    this.serachTypes = [
-      'Pessoa - Cpf',
-      'Pessoa - Nome',
-      'Empresa - Cnpj', 
-      'Empresa - Nome'
-    ]
-
-   }
+  }
 
   ngOnInit(): void {
+    
+  }
+
+  setSearchType(type: string){
+    this.searchType = type;
+  }
+
+  async searchForPerson(){
+    if(this.personToSearchName != ""){
+      let result = await this.pswApi.SearchPersonByName(this.personToSearchName);
+      console.log(result.length);
+    }
+    
   }
 
 }
