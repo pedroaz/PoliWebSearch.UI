@@ -17,12 +17,27 @@
         
     </div>
     
+    <!-- People search bar -->
     <div *ngIf="searchType=='people'">
         <div class="p-mb-5 search-box p-d-flex p-jc-center">
-            <input [(ngModel)]="personToSearchName" class="search-bar" type="text" pInputText placeholder="Digite o nome da pessoa">
+            <input (change)="changeSearchInput($event)" class="search-bar" type="text" pInputText placeholder="Digite o nome da pessoa">
             <button (click)="searchForPerson()" pButton pRipple type="button" icon="pi pi-search" class="p-button-rounded p-button-success search-button"></button>
         </div>
     </div>
+</div>
 
-    
+<div class="card">
+    <p-virtualScroller [value]="personSerachResult" scrollHeight="500px" [itemSize]="100">
+        <ng-template pTemplate="header">
+            <div class="p-d-flex p-ai-center p-jc-between">
+                Resultado da Busca (max 50)
+            </div>
+        </ng-template>
+        <ng-template let-person pTemplate="item">
+            <div>
+                {{person.names[0]}} - {{person.cpf}}
+                <button (click)="inspectPerson(person.cpf)" pButton pRipple type="button" icon="pi pi-info" class="p-button-rounded p-button-success search-button"></button>
+            </div>
+        </ng-template>
+    </p-virtualScroller>
 </div>

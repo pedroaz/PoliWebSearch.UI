@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment'
 import { PersonData } from '../Models/PersonData';
+import { PersonSearchResultData } from '../Models/PersonSearchResultData';
 
 @Injectable({
   providedIn: 'root'
@@ -15,8 +16,8 @@ export class PwsApiService {
     return await this.httpClient.get<PersonData>(url).toPromise();
   }
 
-  async SearchPersonByName(name: string) : Promise<PersonData[]>{
+  async SearchPersonByName(name: string) : Promise<PersonSearchResultData>{
     let url = environment.baseUrl + "api/SearchPersonByName/" + name;
-    return await this.httpClient.get<PersonData[]>(url).toPromise();
+    return await this.httpClient.get<PersonSearchResultData>(url).toPromise();
   }
 }

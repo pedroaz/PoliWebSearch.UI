@@ -25,6 +25,7 @@ import { ChartModule } from 'primeng/chart';
 import { DropdownModule } from 'primeng/dropdown';
 import { PersonPageComponent } from './Components/Pages/person-page/person-page.component';
 import { PanelModule } from 'primeng/panel';
+import { VirtualScrollerModule } from 'primeng/virtualscroller';
 
 // Services
 import { HttpClientModule } from '@angular/common/http';
@@ -52,7 +53,8 @@ import { PwsApiService } from "./Services/pws-api.service"
     ChartModule,
     DropdownModule,
     HttpClientModule,
-    PanelModule
+    PanelModule,
+    VirtualScrollerModule
   ],
   bootstrap: [AppComponent],
   providers: [
