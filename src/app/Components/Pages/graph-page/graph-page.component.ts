@@ -12,4 +12,8 @@ export class GraphPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onNodeSelect(event){
+    console.log(event.id);
+  }
+
 }
