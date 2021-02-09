@@ -1,10 +1,20 @@
 <app-portal-top-menu></app-portal-top-menu>
 
-<div class="graph">
-  <ngx-graph
-    class="chart-container"
+<p-sidebar [(visible)]="displayLeftMenu" styleClass="p-sidebar-lg">
+  Content
+</p-sidebar>
 
-    [links]="
+<button (click)="displayLeftMenu=true" 
+pButton pRipple type="button" icon="pi pi-search" 
+class="p-button-rounded p-button-success search-button search-button">
+</button>
+
+
+<div class="p-d-flex p-jc-center">
+    <div class="p-col-9 fill-screen">
+      <ngx-graph class="chart-container graph-panel"
+  
+      [links]="
       [
         {
           id: 'a',
@@ -35,7 +45,20 @@
         }
       ]"
     (select)="onNodeSelect($event)"
-  >
-  </ngx-graph>
+    >
+      </ngx-graph>
+    </div>
+  
+    <div class="p-col-2 fill-screen">
+      <div class="inspect-panel">
+        <h1>Inspect Panel</h1>
+      </div>
+    </div>
 </div>
+
+
+
+
+
+
 

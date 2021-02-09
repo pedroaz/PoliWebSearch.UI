@@ -1,9 +1,16 @@
-.graph{
+
+.search-button{
+    margin: 1em;
+}
+
+.fill-screen{
+    height: 75vh;
     border: black solid 1px;
-    position: fixed;
-    top: 6em;
-    left: 4em;
-    bottom: 4em;
-    right: 4em;
-    overflow: auto;
+    margin: 1em;
+}
+
+.graph-panel{
+}
+
+.inspect-panel{
 }
