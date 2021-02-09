@@ -1,36 +1,41 @@
 <app-portal-top-menu></app-portal-top-menu>
 
 <div class="graph">
+  <ngx-graph
+    class="chart-container"
 
-    <ngx-graph
-  class="chart-container"
-  [links]="[
-    {
-      id: 'a',
-      source: 'first',
-    target: 'second',
-      label: 'is parent of'
-    }, {
-      id: 'b',
-      source: 'first',
-      target: 'third',
-      label: 'custom label'
-    }
-  ]"
-  [nodes]="[
-    {
-      id: 'first',
-      label: 'A'
-    }, {
-      id: 'second',
-      label: 'B'
-    }, {
-      id: 'third',
-      label: 'C'
-    }
-  ]"
-  (select)="onNodeSelect($event)"
->
-</ngx-graph>
+    [links]="
+      [
+        {
+          id: 'a',
+          source: 'first',
+          target: 'second',
+          label: 'is parent of'
+        },
+        {
+          id: 'b',
+          source: 'first',
+          target: 'third',
+          label: 'custom label'
+        }
+      ]"
+    [nodes]="
+      [
+        {
+          id: 'first',
+          label: 'A'
+        }, 
+        {
+          id: 'second',
+          label: 'B'
+        }, 
+        {
+          id: 'third',
+          label: 'C'
+        }
+      ]"
+    (select)="onNodeSelect($event)"
+  >
+  </ngx-graph>
 </div>
 

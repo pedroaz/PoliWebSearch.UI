@@ -20,8 +20,8 @@
     <!-- People search bar -->
     <div *ngIf="searchType=='people'">
         <div class="p-mb-5 search-box p-d-flex p-jc-center">
-            <input (change)="changeSearchInput($event)" class="search-bar" type="text" pInputText placeholder="Digite o nome da pessoa">
-            <button (click)="searchForPerson()" pButton pRipple type="button" icon="pi pi-search" class="p-button-rounded p-button-success search-button"></button>
+            <input (change)="onChangeSearchInput($event)" class="search-bar" type="text" pInputText placeholder="Digite o nome da pessoa">
+            <button (click)="changeUrlSearchForPerson()" pButton pRipple type="button" icon="pi pi-search" class="p-button-rounded p-button-success search-button"></button>
         </div>
     </div>
 </div>

@@ -1,3 +1,9 @@
 .graph{
     border: black solid 1px;
+    position: fixed;
+    top: 6em;
+    left: 4em;
+    bottom: 4em;
+    right: 4em;
+    overflow: auto;
 }
