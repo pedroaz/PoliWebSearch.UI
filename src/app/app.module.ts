@@ -27,6 +27,8 @@ import { PersonPageComponent } from './Components/Pages/person-page/person-page.
 import { PanelModule } from 'primeng/panel';
 import { VirtualScrollerModule } from 'primeng/virtualscroller';
 import { SidebarModule } from 'primeng/sidebar';
+import { ChipsModule } from 'primeng/chips';
+import { InputSwitchModule } from 'primeng/inputswitch';
 
 // Graphs
 import { NgxGraphModule } from '@swimlane/ngx-graph'
@@ -60,7 +62,9 @@ import { PwsApiService } from "./Services/pws-api.service"
     PanelModule,
     VirtualScrollerModule,
     NgxGraphModule,
-    SidebarModule
+    SidebarModule,
+    ChipsModule,
+    InputSwitchModule
   ],
   bootstrap: [AppComponent],
   providers: [

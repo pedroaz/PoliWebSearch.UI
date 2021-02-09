@@ -1,57 +1,56 @@
 <app-portal-top-menu></app-portal-top-menu>
 
+
+<!-- Left menu -->
 <p-sidebar [(visible)]="displayLeftMenu" styleClass="p-sidebar-lg">
-  Content
+  <div class="">
+    <h1>Pessoas (cpf)</h1>
+    <p-chips></p-chips>
+
+    <h1>Empresas (cnpj)</h1>
+    <p-chips></p-chips>
+
+    <h1>Partidos (sigla)</h1>
+    <p-chips></p-chips>
+
+    <h1>Relações:</h1>
+    <div>
+      Participou de partido<p-inputSwitch></p-inputSwitch>
+    </div>
+    <div>
+      Recebeu dinheiro<p-inputSwitch></p-inputSwitch>
+    </div>
+    
+
+  </div>
+  <div class="p-d-flex p-jc-center">
+    <p-button (click)="createNewGraph()" label="Gerar grafo"></p-button>
+  </div>
+
 </p-sidebar>
 
-<button (click)="displayLeftMenu=true" 
-pButton pRipple type="button" icon="pi pi-search" 
-class="p-button-rounded p-button-success search-button search-button">
+
+<!-- Serach Button -->
+<button (click)="displayLeftMenu=true" pButton pRipple type="button" icon="pi pi-search" 
+  class="p-button-rounded p-button-success search-button search-button">
 </button>
 
-
+<!-- Content -->
 <div class="p-d-flex p-jc-center">
+
+    <!-- Graph -->
     <div class="p-col-9 fill-screen">
       <ngx-graph class="chart-container graph-panel"
-  
-      [links]="
-      [
-        {
-          id: 'a',
-          source: 'first',
-          target: 'second',
-          label: 'is parent of'
-        },
-        {
-          id: 'b',
-          source: 'first',
-          target: 'third',
-          label: 'custom label'
-        }
-      ]"
-    [nodes]="
-      [
-        {
-          id: 'first',
-          label: 'A'
-        }, 
-        {
-          id: 'second',
-          label: 'B'
-        }, 
-        {
-          id: 'third',
-          label: 'C'
-        }
-      ]"
-    (select)="onNodeSelect($event)"
-    >
-      </ngx-graph>
+        [links]="graph.links"
+        [nodes]="graph.nodes"
+        (select)="onNodeClick($event)"
+      ></ngx-graph>
     </div>
-  
+
+    <!-- Inpsect Panel -->
     <div class="p-col-2 fill-screen">
-      <div class="inspect-panel">
-        <h1>Inspect Panel</h1>
+      <div class="p-d-flex p-jc-center inspect-panel">
+        <p>Selecione um nó para ter mais informações (num tá funcionando ainda...)</p>
       </div>
     </div>
 </div>

@@ -19,7 +19,7 @@ export class PortalTopMenuComponent implements OnInit {
         {label: 'Grafos', icon: 'pi pi-fw pi-circle-off', command: () => this.goToRoute('graphs')},
         {label: 'Busca', icon: 'pi pi-fw pi-search', command: () => this.goToRoute('search')},
         {label: 'Inspeção', icon: 'pi pi-fw pi-info', command: () => this.goToRoute('inspect')},
-        {label: 'Gráficos', icon: 'pi pi-fw pi-chart-bar', command: () => this.goToRoute('charts')}
+        {label: 'Estatísticas', icon: 'pi pi-fw pi-chart-bar', command: () => this.goToRoute('charts')}
     ];
   }
 
