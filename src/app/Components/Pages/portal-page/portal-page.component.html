@@ -4,17 +4,13 @@
 <h2>Serviços que oferecemos: </h2>
 <p-fieldset legend="Grafos">
     <p>Descrição do serviço de grafos</p>
-    <button pButton pRipple type="button" label="Visitar página" class="p-button-rounded"></button>
+    <button (click)="navigateTo('graphs')" pButton pRipple type="button" label="Visitar página" class="p-button-rounded"></button>
 </p-fieldset>
 <p-fieldset legend="Busca">
     <p>Descrição do serviço de busca</p>
-    <button pButton pRipple type="button" label="Visitar página" class="p-button-rounded"></button>
-</p-fieldset>
-<p-fieldset legend="Inspeção">
-    <p>Descrição do serviço de inspeção</p>
-    <button pButton pRipple type="button" label="Visitar página" class="p-button-rounded"></button>
+    <button (click)="navigateTo('search')" pButton pRipple type="button" label="Visitar página" class="p-button-rounded"></button>
 </p-fieldset>
 <p-fieldset legend="Gráficos">
     <p>Descrição do serviço de gráficos</p>
-    <button pButton pRipple type="button" label="Visitar página" class="p-button-rounded"></button>
+    <button (click)="navigateTo('charts')" pButton pRipple type="button" label="Visitar página" class="p-button-rounded"></button>
 </p-fieldset>
