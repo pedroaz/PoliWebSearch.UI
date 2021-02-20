@@ -1,0 +1,6 @@
+html, body {
+    min-height: 100vh;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arvo', serif;
+}

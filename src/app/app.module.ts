@@ -29,6 +29,7 @@ import { VirtualScrollerModule } from 'primeng/virtualscroller';
 import { SidebarModule } from 'primeng/sidebar';
 import { ChipsModule } from 'primeng/chips';
 import { InputSwitchModule } from 'primeng/inputswitch';
+import { CardModule } from 'primeng/card';
 
 // Graphs
 import { NgxGraphModule } from '@swimlane/ngx-graph'
@@ -64,7 +65,8 @@ import { PwsApiService } from "./Services/pws-api.service"
     NgxGraphModule,
     SidebarModule,
     ChipsModule,
-    InputSwitchModule
+    InputSwitchModule,
+    CardModule
   ],
   bootstrap: [AppComponent],
   providers: [

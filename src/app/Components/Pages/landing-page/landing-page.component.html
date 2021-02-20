@@ -1,4 +1,78 @@
-<h1>Poli Web Search Landing Page</h1>
-<p-button (click)="goToPortal()" label="Go To the Portal"></p-button>
-<h1></h1>
-<img class="diagram-image" src="../../../../assets/images/PoliWebSearch-System-Architecure.png" alt="">
+
+
+<div class="landing-page">
+    <header class="p-d-flex p-flex-column">
+        <h1 class="p-d-flex p-jc-center title">Poli Web Search</h1>
+        <div class="p-d-flex p-jc-center">
+            <button pButton pRipple type="button" label="Portal" class="p-button-rounded p-button-success p-button-lg portal-button" (click)="goToPortal()"></button>
+        </div>
+    </header>
+    
+    <main class="p-d-flex p-flex-column">
+
+        <!-- Buttons -->
+        <div class="p-d-flex p-jc-center buttons-collection">
+            <a href="https://github.com/pedroaz/PoliWebSearch" target="_blank">
+                <i class="pi pi-github" style="font-size: 4rem"></i>
+            </a>
+            
+        </div>
+
+        <!-- Cards -->
+
+        <!-- How it work -->
+        <div class="p-d-flex p-jc-center">
+            <p-card header="Como funciona?" class="card p-shadow-15">
+                <ng-template pTemplate="header">
+                </ng-template>
+                <div class="p-d-flex p-jc-center">
+                    <img class="how-to-image" src="../../../../assets/images/PoliWebSearch-How To.png" alt="">
+                </div>
+            </p-card>
+        </div>
+
+        <!-- Mission -->
+        <div class="p-d-flex p-jc-center">
+            <p-card header="Missão" class="card p-shadow-15">
+                <ng-template pTemplate="header">
+                </ng-template>
+                <p>
+                    Sei lá. Disponibilizar uns dados aí
+                </p>
+            </p-card>
+        </div>
+
+        <!-- Contributors -->
+        <div class="p-d-flex p-jc-center">
+            <p-card header="Contribuidores" class="card p-shadow-15">
+                <ng-template pTemplate="header">
+                </ng-template>
+                <div>
+                    <div class="p-d-flex p-jc-center">
+                        <p-card header="Pedro Azevedo">
+                            <ng-template pTemplate="header">
+                            </ng-template>
+                            <a href="https://github.com/pedroaz" target="_blank">
+                                <img class="github-image" src="../../../../assets/images/github-image-pedro.jpg">
+                            </a>
+                        </p-card>
+                    </div>
+                    <div class="p-d-flex p-jc-center">
+                        <p-card header="Darian Rabbani">
+                            <ng-template pTemplate="header">
+                            </ng-template>
+                            <a href="https://github.com/dariansrr" target="_blank">
+                                <img class="github-image" src="../../../../assets/images/darian-github.jpg">
+                            </a>
+                        </p-card>
+                    </div>
+                </div>
+            </p-card>
+        </div>
+    </main>
+</div>
+
+
+
+
+

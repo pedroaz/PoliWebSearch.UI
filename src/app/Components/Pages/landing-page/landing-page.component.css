@@ -1,4 +1,43 @@
+
+
+.landing-page{
+    min-height: 100vh;
+    height: auto;
+    margin: 0;
+}
+
+header{
+    padding: 1em;
+    background-color: #1934a9;
+}
+
+.title{
+    font-size: 6em;
+    color: white;
+}
+
+.card{
+    width: 50rem;
+    margin: 2em;
+}
+
 .diagram-image{
     height: 75vh;
     width: auto;
+}
+
+.how-to-image{
+    height: 25vh;
+    width: auto;
+}
+
+.buttons-collection{
+    margin: 2em;
+}
+
+a { text-decoration: none; color:#000; }
+
+.github-image{
+    width: 10em;
+    height: 10em;
 }
