@@ -20,4 +20,8 @@ export class PwsApiService {
     let url = environment.baseUrl + "api/SearchPersonByName/" + name;
     return await this.httpClient.get<PersonSearchResultData>(url).toPromise();
   }
+
+  GetSwaggerUrl(){
+    return environment.baseUrl+"api/Swagger/ui/"
+  }
 }
